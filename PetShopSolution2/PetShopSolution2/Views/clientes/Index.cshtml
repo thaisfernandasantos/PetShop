@@ -1,0 +1,57 @@
+﻿@model IEnumerable<PetShopSolution2.Models.cliente>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Lista de Clientes</h2>
+
+<p>
+    @Html.ActionLink("Inserir Novo", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Nome)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Logadouro)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Telefone)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Animal)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Cartao)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Nome)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Logadouro)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Telefone)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Animal)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Cartao)
+        </td>
+        <td>
+            @Html.ActionLink("Editar", "Edit", new { id=item.CPF }) |
+            @Html.ActionLink("Detalhes", "Details", new { id=item.CPF }) |
+            @Html.ActionLink("Deletar", "Delete", new { id=item.CPF })
+        </td>
+    </tr>
+}
+
+</table>

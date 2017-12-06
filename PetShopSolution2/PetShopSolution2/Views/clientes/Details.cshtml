@@ -1,0 +1,58 @@
+﻿@model PetShopSolution2.Models.cliente
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Detalhes</h2>
+
+<div>
+    <h4>cliente</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Nome)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Nome)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Logadouro)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Logadouro)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Telefone)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Telefone)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Animal)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Animal)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Cartao)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Cartao)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.CPF }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
